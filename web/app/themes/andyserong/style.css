@@ -179,6 +179,9 @@ textarea {
 	color: inherit;
 	font: inherit;
 	margin: 0;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
 }
 
 button {
