@@ -598,12 +598,14 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
+	/*clear: both;
 	display: block;
-	float: left;
-	width: 100%;
+	float: left;*/
+	/*width: 100%;*/
+	display: inline-block;
 	margin: 0 auto;
 	text-align: center;
+	vertical-align: top;
 }
 
 .main-navigation ul {
@@ -1017,10 +1019,40 @@ object {
 	}
 }
 
-.trees-header, .trees-footer {
-	
+.site-header-trees, .site-footer-trees {
+	width: 100%;
+	height: 40vh;
+	background-size: cover;
+	background-position: center bottom;
+	position: relative;
 }
 
-.trees-header {
-	transform: rotate(180deg);
+@media screen and (max-width: 640px) {
+	.site-header-trees, .site-footer-trees {
+		height: 25vh;
+	}
+}
+
+.trees-footer {
+	/*transform: rotate(180deg);*/
+}
+
+.site-header-nav-container {
+    margin: 0 auto;
+	position: absolute;
+	bottom: 1em;
+	width:100%;
+}
+
+.site-branding {
+}
+
+.main-navigation {
+}
+
+.site-logo {
+	width: 191px;
+	height: 41px;
+	display: inline-block;
+	margin: 0 1em 0 0;
 }

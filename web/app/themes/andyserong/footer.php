@@ -13,19 +13,18 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer site-footer-trees" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/img/trees-subdued.jpg');" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'andyserong' ) ); ?>"><?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'andyserong' ), 'WordPress' );
+				printf( esc_html__( 'Somewhat warmly powered by %s', 'andyserong' ), 'WordPress' );
 			?></a>
 			<span class="sep"> | </span>
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'andyserong' ), 'andyserong', '<a href="https://automattic.com/">Andrew Serong</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'andyserong' ), 'andyserong', '<a href="https://twitter.com/andrewserong">Andrew Serong</a>' );
 			?>
 		</div><!-- .site-info -->
-	<img class="trees-footer" src="<?php echo get_bloginfo('template_url') ?>/img/trees-inverted.svg"/>	
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
