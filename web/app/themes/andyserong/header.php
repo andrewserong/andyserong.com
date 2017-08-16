@@ -26,7 +26,9 @@
 	<header id="masthead" class="site-header site-header-trees" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/img/trees-subdued.jpg');" role="banner">
 		<div class="site-header-nav-container">
 			<div class="site-branding">
-				<img class="site-logo" src="<?php echo get_bloginfo('template_url') ?>/img/andy-serong.svg" alt="Andy Serong logo"/>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img class="site-logo" src="<?php echo get_bloginfo('template_url') ?>/img/andy-serong.svg" alt="Andy Serong logo"/>
+				</a>
 				<!-- Commenting this bit out, but keeping it there for the moment...
 				<?php
 				if ( is_front_page() && is_home() ) : ?>
