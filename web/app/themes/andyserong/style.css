@@ -986,6 +986,10 @@ object {
 	float: left;
 }
 
+.site-content .context-area__full-width {
+	width: 100%;
+}
+
 .site-content .widget-area {
 	padding-left: 1rem;
 	padding-right: 1rem;
