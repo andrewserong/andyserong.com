@@ -271,9 +271,9 @@ select,
 textarea {
 	color: #111111;
 	font-family: Georgia, Times, "Times New Roman", serif;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
+	font-size: 18px;
+	font-size: 1.125rem;
+	line-height: 1.45;
 }
 
 h1,
@@ -286,27 +286,24 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.3em;
 }
 
 /* from: http://www.cssfontstack.com/Georgia */
+/* with help from: http://type-scale.com/ */
 
-h1,h2 {
+h1, h2, h3, h4 {
 	font-family: Georgia, Times, "Times New Roman", serif;
-	font-size: 1.714rem;
+	font-size: 1.999rem;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
-	line-height: 1.885rem;
+	line-height: 1.2;
+	margin: 1.414em 0 0.5em;
 }
 
-h3 {
-	font-family: Georgia, Times, "Times New Roman", serif;
-	font-size: 1rem;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 1.1rem;
+h1 {
+	margin-top: 0;
 }
 
 p {
@@ -315,7 +312,7 @@ p {
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
-	line-height: 1.428rem;
+	line-height: 1.45rem;
 }
 
 blockquote {
@@ -835,9 +832,12 @@ a:active {
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
+}
+
+.entry-content {
+	margin: 0;
 }
 
 .page-links {
@@ -970,13 +970,13 @@ object {
 	color: #111;
 }
 .site-branding {
-	max-width: 860px;
+	max-width: 800px;
 	margin: 0 auto;
 	padding: 1rem;
 }
 
 .site-content {
-	max-width: 860px;
+	max-width: 800px;
 	margin: 0 auto;
 	padding: 1rem;
 }
@@ -984,6 +984,7 @@ object {
 .site-content .content-area {
 	width: 70%;
 	float: left;
+	padding-top: 1rem; /* so that heading matches top heading of the aside widget */
 }
 
 .site-content .context-area__full-width {
@@ -1038,10 +1039,6 @@ object {
 	}
 }
 
-.trees-footer {
-	/*transform: rotate(180deg);*/
-}
-
 .site-header-nav-container {
     margin: 0 auto;
 	position: absolute;
@@ -1060,4 +1057,37 @@ object {
 	height: 41px;
 	display: inline-block;
 	margin: 0 1em 0 0;
+}
+
+.social-media-links {
+    font-size: 1.25rem;
+}
+.social-media-links a {
+    display: inline-block;
+    padding: 0.25em;
+}
+
+p.barely-visible-footer {
+	font-size: 0.75em;
+	color: #666673;
+}
+
+.barely-visible-footer a {
+	color: #9494a6;
+}
+
+.barely-visible-footer a:hover,
+.barely-visible-footer a:active {
+	color: #aaaabf;
+}
+
+/*--------------------------------------------------------------
+## Entry content
+--------------------------------------------------------------*/
+@media screen and (max-width: 512px) {
+	.entry-content img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1.5em;
+	}
 }
