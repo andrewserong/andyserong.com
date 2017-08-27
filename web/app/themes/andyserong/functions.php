@@ -105,7 +105,9 @@ add_action( 'widgets_init', 'andyserong_widgets_init' );
  * Enqueue scripts and styles.
  */
 function andyserong_scripts() {
-	wp_enqueue_style( 'andyserong-style', get_stylesheet_uri() );
+	$cache_buster = date( "YmdHi", filemtime( get_template_directory() . '/style.css') );
+
+	wp_enqueue_style( 'andyserong-style', get_stylesheet_uri(), array(), $cache_buster );
 
 	wp_enqueue_script( 'andyserong-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
