@@ -1034,8 +1034,11 @@ object {
 }
 
 @media screen and (max-width: 640px) {
-	.site-header-trees, .site-footer-trees {
+	.site-header-trees {
 		height: 25vh;
+	}
+	.site-footer-trees {
+		height: auto;
 	}
 }
 
