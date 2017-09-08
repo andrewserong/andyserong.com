@@ -304,12 +304,12 @@ h1, h2, h3, h4 {
 
 p {
 	font-family: Georgia, Times, "Times New Roman", serif;
-	font-size: 18px;
-	font-size: 1.125rem;
+	font-size: 19px;
+	font-size: 1.2rem;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
-	line-height: 1.45rem;
+	line-height: 1.8rem;
 }
 
 blockquote {
@@ -471,7 +471,7 @@ input[type="reset"],
 input[type="submit"] {
 	border: none;
 	border-radius: 2px;
-	background: #44a97e;
+	background: #676782;
 	color: #fafafa;
 	line-height: 1;
 	padding: 1em;
@@ -493,7 +493,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: #90ce92;
+	background: #9494A6;
 	border-color: #ccc #bbb #aaa;
 }
 
@@ -505,7 +505,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	background: #90ce92;
+	background: #9494A6;
 	border-color: #aaa #bbb #bbb;
 }
 
@@ -565,18 +565,18 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #44a97e;
+	color: #676782;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #44a97e;
+	color: #676782;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #90ce92;
+	color: #9494A6;
 }
 
 a:focus {
@@ -1084,10 +1084,21 @@ p.barely-visible-footer {
 /*--------------------------------------------------------------
 ## Entry content
 --------------------------------------------------------------*/
+.entry-content p a {
+    border-bottom: 1px solid rgba(148,148,166,0.6);
+}
+
 @media screen and (max-width: 512px) {
 	.entry-content img {
 		width: 100%;
 		height: auto;
 		margin-bottom: 1.5em;
 	}
+}
+
+.listing-meta a {
+	color: #333;
+	font-size: 0.618em;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #9494a6;
 }

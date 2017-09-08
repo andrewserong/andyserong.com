@@ -26,6 +26,14 @@ get_header(); ?>
 				</header>
 
 			<?php
+			else : ?>
+
+				<header>
+					<h2 class="entry-title">Here&rsquo;s some posts</h2>
+				</header>
+
+			<?php
+
 			endif;
 
 			/* Start the Loop */
@@ -36,7 +44,7 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				get_template_part( 'template-parts/listing', get_post_format() );
 
 			endwhile;
 
