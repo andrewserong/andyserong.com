@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Andrew Serong
 Author URI: https://github.com/andrewserong
 Description: A one-off theme for andyserong.com
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: andyserong
@@ -43,6 +43,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Galleries
 # Site content layout
 --------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Lora');
 
 /*--------------------------------------------------------------
 # Normalize
@@ -270,7 +272,7 @@ input,
 select,
 textarea {
 	color: #111111;
-	font-family: Georgia, Times, "Times New Roman", serif;
+	font-family: Lora, Georgia, Times, "Times New Roman", serif;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.45;
@@ -293,7 +295,7 @@ p {
 /* with help from: http://type-scale.com/ */
 
 h1, h2, h3, h4 {
-	font-family: Georgia, Times, "Times New Roman", serif;
+	font-family: Lora, Georgia, Times, "Times New Roman", serif;
 	font-size: 1.999rem;
 	font-style: normal;
 	font-variant: normal;
@@ -303,7 +305,7 @@ h1, h2, h3, h4 {
 }
 
 p {
-	font-family: Georgia, Times, "Times New Roman", serif;
+	font-family: Lora, Georgia, Times, "Times New Roman", serif;
 	font-size: 19px;
 	font-size: 1.2rem;
 	font-style: normal;
@@ -313,7 +315,7 @@ p {
 }
 
 blockquote {
-	font-family: Georgia, Times, "Times New Roman", serif;
+	font-family: Lora, Georgia, Times, "Times New Roman", serif;
 	font-size: 1.5rem;
 	font-style: normal;
 	font-variant: normal;
@@ -322,7 +324,7 @@ blockquote {
 }
 
 pre {
-	font-family: Georgia, Times, "Times New Roman", serif;
+	font-family: Lora, Georgia, Times, "Times New Roman", serif;
 	font-size: 0.928rem;
 	font-style: normal;
 	font-variant: normal;
@@ -681,6 +683,16 @@ a:active {
 	display: none;
 }
 
+/* Gotta be a better selector for this */
+.nav-links a {
+    border-radius: 2px;
+    border: 1px solid #efefef;
+    padding: 0.5em;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
@@ -693,6 +705,8 @@ a:active {
 .post-navigation .nav-previous {
 	float: left;
 	width: 50%;
+	width: calc(50% - 0.5em);
+	position: relative;
 }
 
 .comment-navigation .nav-next,
@@ -701,6 +715,45 @@ a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+	width: calc(50% - 0.5em);
+	position: relative;
+}
+
+.nav-previous a, .nav-next a {
+	padding: 1em 0;
+	display: block;
+}
+
+.nav-prev__icon, .nav-next__icon {
+	padding: 0 1em;
+}
+
+.nav-prev__icon {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateY(-50%);  /* IE 9 */
+          transform: translateY(-50%);  /* Firefox 16+, IE 10+, Opera */
+}
+
+.nav-next__icon {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	-webkit-transform: translateY(-50%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateY(-50%);  /* IE 9 */
+          transform: translateY(-50%);  /* Firefox 16+, IE 10+, Opera */
+}
+
+.nav-previous .nav-btn-text {
+	padding-left: 2.5em;
+	padding-right: 1em;
+}
+
+.nav-next .nav-btn-text {
+	padding-right: 2.5em;
+	padding-left: 1em;
 }
 
 /*--------------------------------------------------------------
@@ -1089,7 +1142,7 @@ p.barely-visible-footer {
 }
 
 @media screen and (max-width: 512px) {
-	.entry-content img {
+	img.size-full, img.size-medium, img.size-large {
 		width: 100%;
 		height: auto;
 		margin-bottom: 1.5em;
@@ -1101,4 +1154,14 @@ p.barely-visible-footer {
 	font-size: 0.618em;
 	padding-bottom: 2px;
 	border-bottom: 1px solid #9494a6;
+}
+
+.post .entry-title {
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.post .entry-meta {
+	margin-bottom: 1.5em;
+	text-align: center;
 }

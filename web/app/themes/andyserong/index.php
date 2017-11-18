@@ -48,7 +48,11 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			$nav_settings = array(
+				"prev_text" => "<i class='fa fa-chevron-left' aria-hidden='true'></i>",
+				"next_text" => "<i class='fa fa-chevron-right' aria-hidden='true'></i>"
+			);
+			the_posts_navigation( $nav_settings );
 
 		else :
 
